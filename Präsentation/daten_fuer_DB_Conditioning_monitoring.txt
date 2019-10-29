@@ -1,0 +1,8 @@
+Daten für  haben Struktur:
+- timestamp
+- auftragsnr
+- prozessid
+- messwert
+- sensor id
+- iterative id
+- release

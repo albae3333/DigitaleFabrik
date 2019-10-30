@@ -1,0 +1,5 @@
+1) Wie viele Arbeiter gibt es etwa in der Produktion (um die Lizenzkosten für SAP schätzen zu können)? -> https://versino.de/sap-business-one/kosten/
+2) Wie oft bzw. wie viele Flaschen sind pro Bestellung etwa von Fehlern betroffen?
+3) Wie oft fällt der Braumeister etwa aus?
+4) Wie lange dauert der Brauprozess insgesamt? -> 3-8 Wochen
+5) Sind Mobile Devices für die Mitarbeiter bereits vorhanden?

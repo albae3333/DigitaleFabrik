@@ -1,3 +1,0 @@
-MQTT zwischen Client und Gateway
-Gateway mit Nodered
-OPC-UA zwischen Gateway und SPS

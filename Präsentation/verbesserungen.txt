@@ -1,7 +1,12 @@
 - RFID nicht optional
 - Achitektur: SAP mit Gateway, Schnittstelle mit Conditioning Monitoring
-- Mitarbeiter entlasten weg -> Transparenz, Nachhaltigkeit
-- Single Point of Failure -> Vorteile für Braumeister dartsellen
+- Mitarbeiter entlasten weg 
+	-> Transparenz, Nachhaltigkeit
+- Single Point of Failure 
+	-> Vorteile für Braumeister dartsellen
+	-> Schaffung von neuen Produkten, neue Biersorten
+	-> kann sich ausruhen (wegen Gesundheit)
+	-> muss nicht die ganze Zeit rumschreien
 - BPMN -> was ist automatisiert dartsellen
 - kein Kostenplan nur Endsumme und was geliefert wird
 - Kosteinsparrungen: 	- nur von 10% Steigerung reden
@@ -12,3 +17,4 @@
 - Risiko: 		- Pflanzen-Gruppe nicht fertig
 			- kein Zugang zu Haux
 			- Hardware geht kaputt?
+- Absprache mit Gruppen

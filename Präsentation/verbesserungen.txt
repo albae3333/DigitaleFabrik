@@ -1,0 +1,14 @@
+- RFID nicht optional
+- Achitektur: SAP mit Gateway, Schnittstelle mit Conditioning Monitoring
+- Mitarbeiter entlasten weg -> Transparenz, Nachhaltigkeit
+- Single Point of Failure -> Vorteile für Braumeister dartsellen
+- BPMN -> was ist automatisiert dartsellen
+- kein Kostenplan nur Endsumme und was geliefert wird
+- Kosteinsparrungen: 	- nur von 10% Steigerung reden
+			- keine klare Behauptung zu Steigerung des Marktanteil
+			- Aussage zu Lieferern weg
+- Gantt-Chart: 		- Zeitpuffer anzeigen
+			- Aktivitäten des kritischen Pfads als Liste
+- Risiko: 		- Pflanzen-Gruppe nicht fertig
+			- kein Zugang zu Haux
+			- Hardware geht kaputt?

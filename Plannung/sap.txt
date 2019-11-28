@@ -1,0 +1,28 @@
+in Stückliste einzelne Komponenten angeben (Zutaten)
+in Arbeitsplan die einzelnen Rezeptschritte eintragen
+	-> nicht zu viele Details angeben
+weiterer Langtext = neben Arbeitsplatz auf die Seite klicken
+Aufpassen ob man ändernt oder anzeigend ist
+für Objekte neue Attribute -> klassifikation4
+kozernweite Daten sind in Grundreiter 1
+spezifische Daaten sind in Grundreite 2
+Buchhaltung und Disposition von Jungbier kopieren
+
+TODO:
+Absprache mit Team und Conditiong Monitoring wegen Operation Code
+
+
+Befehle:
+/n -> zurück auf home
+meist:
+	01 -> anlegen
+	02 -> ändern
+	03 -> anzeigen
+/nmm -> Material
+/ncs -> Stückliste
+/nca -> Arbeitsplan
+
+Übersicht:
+JB-013 -> Jungbier
+FB-013 -> Flaschenbier
+Z-013 -> Zucker

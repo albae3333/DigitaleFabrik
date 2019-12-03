@@ -3,7 +3,7 @@
 	- SPS Tobi, Lukas
 SAP:
 - Absprache mit Team und Conditiong Monitoring wegen Operation Code
-- Auftrag erstellen
+- Auftrag erstellen testen -> Arbeitsinstruktionen für Jungbier
 - Qualitätsrückmeldung
 
 SPS:

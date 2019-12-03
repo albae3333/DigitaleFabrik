@@ -1,15 +1,12 @@
-in Stückliste einzelne Komponenten angeben (Zutaten)
-in Arbeitsplan die einzelnen Rezeptschritte eintragen
+- in Stückliste einzelne Komponenten angeben (Zutaten)
+- in Arbeitsplan die einzelnen Rezeptschritte eintragen
 	-> nicht zu viele Details angeben
-weiterer Langtext = neben Arbeitsplatz auf die Seite klicken
-Aufpassen ob man ändernt oder anzeigend ist
-für Objekte neue Attribute -> klassifikation4
-kozernweite Daten sind in Grundreiter 1
-spezifische Daaten sind in Grundreite 2
-Buchhaltung und Disposition von Jungbier kopieren
-
-TODO:
-Absprache mit Team und Conditiong Monitoring wegen Operation Code
+- weiterer Langtext = neben Arbeitsplatz auf die Seite klicken
+- Aufpassen ob man ändernt oder anzeigend ist
+- für Objekte neue Attribute -> klassifikation
+- kozernweite Daten sind in Grundreiter 1
+- spezifische Daaten sind in Grundreite 2
+- Buchhaltung und Disposition von Jungbier kopieren
 
 
 Befehle:
@@ -21,8 +18,17 @@ meist:
 /nmm -> Material
 /ncs -> Stückliste
 /nca -> Arbeitsplan
+/nco -> Fertigungsauftrag mit PP01
+/nco11 -> Rückmeldung 
+/nqm10 -> Qulitätsmeldung mit Startfenster 1.1.2019
+
 
 Übersicht:
 JB-013 -> Jungbier
 FB-013 -> Flaschenbier
 Z-013 -> Zucker
+C-013 -> Carapils
+HCA-013 -> Hopfen
+HCE-013 -> Hopfen
+BW-013 -> Brauwasser
+H-013 -> Hefe

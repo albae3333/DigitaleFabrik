@@ -1,0 +1,17 @@
+SAP Dienste (SPS schickt an SAP)
+
+Auftragsliste 
+-> None
+<- Liste[{"AuftragsID"=value, "Menge"=quantity, "Produkt"=product, "Dauer"=time}]
+
+nächste Schritte holen
+-> AuftragsID
+<- Instruktionen für Schritt 
+[{"AuftragsID"=value, "SchrittID"=stepid, "values"= {{"Temperatur"=value, "Dauer"=value}}, "Langtext"=text}*2]
+
+Schritt fertig
+-> AuftragsID, SchrittID, Rückmeldung
+<- None
+
+
+Dashboard holt sich Labels über SchrittID

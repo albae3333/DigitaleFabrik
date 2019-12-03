@@ -1,9 +1,0 @@
-- Gruppeneinteilung:
-	- SAP Malte, Lisa 
-	- SPS Tobi, Lukas
-- Präsi ins Forum hochladen unter neuem Topic
-- Zeitplan anpassen, nach hinten schieben
-- Ablauf "wer sendet wem was" aufschreiben
-	-> Planung/Ablauf.xlsx
-- Mock-up für Dashboard
-- Software installieren

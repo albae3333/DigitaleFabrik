@@ -7,10 +7,11 @@ Auftragsliste
 nächste Schritte holen
 -> AuftragsID
 <- Instruktionen für Schritt 
-[{"AuftragsID"=value, "SchrittID"=stepid, "values"= {{"Temperatur"=value, "Dauer"=value}}, "Langtext"=text}*2]
+[{"AuftragsID"=value, "SchrittID"=stepid, "values"= {{"Temperatur"=value, "Dauer"=value}}, "Langtext"=text}, 
+"SchrittID"=stepid, "values"= {{"Temperatur"=value, "Dauer"=value}}, "Langtext"=text}]
 
 Schritt fertig
--> AuftragsID, SchrittID, Rückmeldung
+-> [{"AuftragsID"=value, "SchrittID"=stepid, "Rückmeldung"=response}]
 <- None
 
 

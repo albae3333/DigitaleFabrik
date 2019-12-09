@@ -28,7 +28,7 @@ JB-013 -> Jungbier
 FB-013 -> Flaschenbier
 Z-013 -> Zucker
 C-013 -> Carapils
-HCA-013 -> Hopfen
-HCE-013 -> Hopfen
+HCA-013 -> Hopfen Cascade
+HCE-013 -> Hopfen Centennial
 BW-013 -> Brauwasser
 H-013 -> Hefe

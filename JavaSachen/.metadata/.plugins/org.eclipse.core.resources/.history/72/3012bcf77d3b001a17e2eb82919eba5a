@@ -1,0 +1,115 @@
+package de.fh.albsig.digitalfactory.client;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.eclipse.paho.client.mqttv3.IMqttClient;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import de.fh.albsig.digitalfactory.connector.TaskConfirmer;
+import de.fh.albsig.digitalfactory.connector.TaskSchedule;
+import de.fh.albsig.digitalfactory.connector.model.Confirmation;
+import de.fh.albsig.digitalfactory.connector.model.Task;
+
+public class MqttClientMain
+{
+
+	public static void main(final String[] args)
+		throws MqttException
+	{
+		final IMqttClient mqttClient = new MqttClient(
+				String.format("tcp://%s:%s", MqttConstants.BROKER, MqttConstants.BROKER_PORT), "SAP");
+
+		final MqttConnectOptions options = new MqttConnectOptions();
+		options.setAutomaticReconnect(true);
+		options.setCleanSession(false);
+		options.setConnectionTimeout(10);
+		mqttClient.connect(options);
+		
+		mqttClient.subscribe(MqttConstants.TOPIC_GETORDERNUMBER, 1, (topic, message) -> {
+			try {
+				
+				String[] message_split = new String(message.getPayload()).split(";");
+				String orderNumber = message_split[0];
+				String transactionKey = message_split[1];
+				System.out.print(orderNumber);
+				System.out.print("\n");
+				System.out.print(transactionKey);
+				final TaskSchedule schedule = new TaskSchedule();
+				//von SAP den aktuellen Schritt holen
+				final List<Task> tasks = schedule.nextTask(orderNumber, transactionKey);
+				System.out.println("Tasks: ");
+				System.out.println(tasks);
+				System.out.println(tasks.size());
+				
+				final String json_current_task = new ObjectMapper().writeValueAsString(tasks.get(0));
+				final String json_next_task = new ObjectMapper().writeValueAsString(tasks.get(1));
+				final String combined_json = "{ currentTask: "+json_current_task +", nextTask: "+ json_next_task+"}";
+
+				//beide Schritte werden als JSON gesendet
+				mqttClient.publish(MqttConstants.TOPIC_STEPS, combined_json.getBytes(), 1, false);
+
+			} catch (final Throwable t) {
+
+				t.printStackTrace(System.err);
+
+			}
+		});
+
+		/*mqttClient.subscribe(MqttConstants.TOPIC_GETSTEPS, 1, (topic, message) -> {
+			try {
+
+				final String payload = new String(message.getPayload());
+				//Speichert JSON als Confirmation Object
+				final Confirmation confirmation = new ObjectMapper().readValue(payload, Confirmation.class);
+				System.out.println(confirmation);
+
+				final TaskConfirmer confirmer = new TaskConfirmer();
+
+				//von SAP den aktuellen Schritt holen
+				final TaskSchedule schedule = new TaskSchedule();
+				System.out.println(confirmation.getTransactionKey());
+				
+				final String orderNumber = confirmation.getOrderNumber();
+				String transactionKey = String.valueOf(Integer.parseInt(confirmation.getTransactionKey()) + 10);
+				System.out.println("OrderNumber: ");
+				System.out.println(confirmation.getOrderNumber());
+				final Task current_task = schedule.nextTask(orderNumber, "10");
+				System.out.println("Current Task: ");
+				System.out.println(current_task);
+				
+				//von SAP den nächsten Schritt holen
+				transactionKey = String.valueOf(Integer.parseInt(transactionKey) + 10); 
+				final Task next_task = schedule.nextTask(orderNumber, "10");
+				System.out.println("Next Task: ");
+				System.out.println(next_task);
+
+				final String json_current_task = new ObjectMapper().writeValueAsString(current_task);
+				final String json_next_task = new ObjectMapper().writeValueAsString(next_task);
+				final String combined_json = "{ currentTask: "+json_current_task +", nextTask: "+ json_next_task+"}";
+
+				//beide Schritte werden als JSON gesendet
+				mqttClient.publish(MqttConstants.TOPIC_STEPS, combined_json.getBytes(), 1, false);
+
+			} catch (final Throwable t) {
+
+				t.printStackTrace(System.err);
+
+			}
+		});
+		*/
+		
+		System.out.println("Press enter to exit!");
+
+		final Scanner s = new Scanner(System.in);
+		s.nextLine();
+		s.close();
+
+		System.exit(0);
+	}
+
+}

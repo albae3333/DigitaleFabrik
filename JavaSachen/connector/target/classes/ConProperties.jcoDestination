@@ -1,0 +1,8 @@
+jco.client.lang=de
+jco.client.client=202
+jco.client.passwd=heute0000
+jco.client.user=RFC_USER
+jco.client.sysnr=95
+jco.client.ashost=/H/cloud.ucc.ovgu.de/S/3299/H/a95z.2.ucc.md
+jco.destination.peak_limit=10
+jco.destination.pool_capacity=3

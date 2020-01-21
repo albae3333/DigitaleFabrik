@@ -1,0 +1,10 @@
+package de.fh.albsig.digitalfactory.client;
+
+public class Order {
+	
+	private String aufnr;
+	private String plnbez;
+	private String gstrp;
+	private String gamng;
+	private String gme;
+}

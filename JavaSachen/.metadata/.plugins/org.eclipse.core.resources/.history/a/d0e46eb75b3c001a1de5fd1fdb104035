@@ -1,0 +1,35 @@
+package de.fh.albsig.digitalfactory.client;
+
+public class Order {
+	
+	private String aufnr;
+	private String plnbez;
+	private String gstrp;
+	private String gamng;
+	private String gme;
+	
+	public Order() {}
+	
+	public Order(final String aufnr, final String plnbez, 
+			final String gstrp, final String gamng, 
+			final String gme) 
+	{
+		this.aufnr = aufnr; 	//Auftragsnummer
+		this.plnbez = plnbez;	//Produktbezeichnung
+		this.gstrp = gstrp;		//Starttermin
+		this.gamng = gamng;		//Menge
+		this.gme = gme;			//Einheit
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Order [aufnr=" + this.aufnr
+				+ ", plnbez=" + this.plnbez
+				+ ", gstrp=" + this.gstrp
+				+ ", gamng=" + this.gamng
+				+ ", gme=" + this.gme + "]";
+	}
+	
+	
+}

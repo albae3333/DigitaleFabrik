@@ -1,0 +1,28 @@
+package de.fh.albsig.digitalfactory.client;
+
+import com.sap.conn.jco.JCoDestination;
+import com.sap.conn.jco.JCoDestinationManager;
+import com.sap.conn.jco.JCoException;
+import com.sap.conn.jco.JCoFunction;
+import com.sap.conn.jco.JCoRepository;
+
+import de.fh.albsig.digitalfactory.connector.JCoConstants;
+
+public class OrderListScheduler {
+	
+	
+	
+	private JCoDestination destination;
+	private JCoFunction function;
+
+	public OrderListScheduler() throws JCoException
+	{
+		this.destination = JCoDestinationManager.getDestination(JCoConstants.JCO_DESTINATION_PATH);
+		this.destination.ping();
+
+		final JCoRepository repository = this.destination.getRepository();
+
+		this.function = repository.getFunction(JCoConstants.JCO_GETORDERLIST);
+	}
+
+}

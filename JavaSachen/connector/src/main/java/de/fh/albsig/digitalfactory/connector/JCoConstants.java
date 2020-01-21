@@ -7,10 +7,11 @@ public final class JCoConstants
 	public static final String JCO_DESTINATION_PATH = "src/main/resources/ConProperties";
 
 
-	public static final String NEXT_TASK_BY_ORDERNUMBER = "Z_NEXTOP_BYORDER1";
-	public static final String CONFIRM_TASK = "Z_MS_CONFIRMOP";
+	public static final String NEXT_TASK_BY_ORDERNUMBER = "ZE271_NAECHSTESCHRITTEHOLEN";
+	public static final String CONFIRM_TASK = "ZE271_RUECKMELDUNG";
+	public static final String GETORDERLIST = "ZE271_AUFTRAGSLISTE";
 
-
+	public static final String I_FERTIGUNGSSTEUERER = "I_FERTIGUNGSSTEUERER";
 	public static final String I_ORDERNUMBER = "I_AUFNR";
 	public static final String I_TRANSACTIONKEY = "I_VORNR";
 

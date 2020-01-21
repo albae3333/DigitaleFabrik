@@ -5,9 +5,11 @@
 - Aufpassen ob man ändernt oder anzeigend ist
 - für Objekte neue Attribute -> klassifikation
 - kozernweite Daten sind in Grundreiter 1
-- spezifische Daaten sind in Grundreite 2
+- spezifische Daten sind in Grundreiter 2
 - Buchhaltung und Disposition von Jungbier kopieren
 
+- OPCode machen
+- Java Connector anpassen
 
 Befehle:
 /n -> zurück auf home
@@ -21,7 +23,17 @@ meist:
 /nco -> Fertigungsauftrag mit PP01
 /nco11 -> Rückmeldung 
 /nqm10 -> Qulitätsmeldung mit Startfenster 1.1.2019
+/nse80 -> Abba Funktions Bausteine
+/nse37 -> Bausteine ausführen
+/ncl -> Klassen
+/ncoois -> Suche nach Aufträgen
 
+Java Connector zwei Schritte
+SAP Bausteine testen
+OpCode eintragen
+Auftragsliste?
+
+Wenn alles scheitert zweiten Baustein der nächsten Schritt holt
 
 Übersicht:
 JB-013 -> Jungbier
